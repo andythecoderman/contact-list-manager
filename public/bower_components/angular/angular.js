@@ -16624,10 +16624,10 @@ function $FilterProvider($provide) {
                                 {name:'Julie', phone:'555-8765'},
                                 {name:'Juliette', phone:'555-5678'}]"></div>
 
-       Search: <input ng-model="searchText">
+       Search: <input ng-model="searchNameText">
        <table id="searchTextResults">
          <tr><th>Name</th><th>Phone</th></tr>
-         <tr ng-repeat="friend in friends | filter:searchText">
+         <tr ng-repeat="friend in friends | filter:searchNameText">
            <td>{{friend.name}}</td>
            <td>{{friend.phone}}</td>
          </tr>
@@ -16655,13 +16655,13 @@ function $FilterProvider($provide) {
        };
 
        it('should search across all fields when filtering with a string', function() {
-         var searchText = element(by.model('searchText'));
-         searchText.clear();
-         searchText.sendKeys('m');
+         var searchNameText = element(by.model('searchNameText'));
+         searchNameText.clear();
+         searchNameText.sendKeys('m');
          expectFriendNames(['Mary', 'Mike', 'Adam'], 'friend');
 
-         searchText.clear();
-         searchText.sendKeys('76');
+         searchNameText.clear();
+         searchNameText.sendKeys('76');
          expectFriendNames(['John', 'Julie'], 'friend');
        });
 
@@ -24245,7 +24245,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', function($locale, $interp
  *     case the object identity does not matter. Two objects are considered equivalent as long as their `id`
  *     property is same.
  *
- *     For example: `item in items | filter:searchText track by item.id` is a pattern that might be used to apply a filter
+ *     For example: `item in items | filter:searchNameText track by item.id` is a pattern that might be used to apply a filter
  *     to items in conjunction with a tracking expression.
  *
  *   * `variable in expression as alias_expression` – You can also provide an optional alias expression which will then store the
