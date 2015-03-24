@@ -1,0 +1,14 @@
+<label for="nameSearch">Name Search:</label>&nbsp;<input id="nameSearch" ng-model="searchNameText" /><br/>
+<label for="stateSearch">State Search:</label>&nbsp;<input id="stateSearch" ng-model="searchStateText" />
+<div ng-repeat="contact in contacts | filter: applySearchFilter | orderBy: 'first_name'" class="panel panel-default">
+    <div class="panel-heading">{{contact.first_name}} {{contact.last_name}}</div>
+    <div class="panel-body">
+        <address>
+            {{contact.address}}<br/>
+            {{contact.city}}, {{contact.state}} {{contact.zip}}<br/>
+            <abbr title="Phone">P:</abbr> {{contact.phone}}<br/>
+        </address>
+        <label>Join Date:</label>&nbsp;{{contact.join_date}}
+    </div>
+</div>
+
