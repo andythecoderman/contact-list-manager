@@ -2,6 +2,9 @@
 logs
 *.log
 
+# Webstorm project settings folder
+.idea
+
 # Runtime data
 pids
 *.pid
