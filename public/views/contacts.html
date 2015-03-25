@@ -1,6 +1,7 @@
 <label for="nameSearch">Name Search:</label>&nbsp;<input id="nameSearch" ng-model="searchNameText" /><br/>
-<label for="stateSearch">State Search:</label>&nbsp;<input id="stateSearch" ng-model="searchStateText" />
-<div ng-repeat="contact in contacts | filter: applySearchFilter | orderBy: 'first_name'" class="panel panel-default">
+<label for="stateSearch">State Search:</label>&nbsp;<input id="stateSearch" ng-model="searchStateText" /><br/>
+<dir-pagination-controls template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+<div dir-paginate="contact in contacts | filter: applySearchFilter | orderBy: 'first_name' | itemsPerPage: 10" class="panel panel-default">
     <div class="panel-heading">{{contact.first_name}} {{contact.last_name}}</div>
     <div class="panel-body">
         <address>
