@@ -3,6 +3,7 @@ var CustomerCtrl = myApp.controller('CustomerCtrl', ['$scope', '$routeParams', '
 
     $scope.searchNameText = '';
     $scope.searchStateText = '';
+    $scope.recPerPage = 10;
 
     Contacts.get(function(data){
         $scope.contacts = data;

@@ -3,12 +3,13 @@
 // declare top-level module which depends on filters,and services
 var myApp = angular.module('myApp', [
     'ngRoute',
-    'contactsServices'
+    'contactsServices',
+    'angularUtils.directives.dirPagination'
 ]);
 
 myApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.when('/', {
-        templateUrl:'views/home.html',
+        templateUrl:'views/contacts.html',
         controller : 'CustomerCtrl'
     });
 
