@@ -1,0 +1,88 @@
+label, th, .panel-heading{
+    font-family: 'Oswald', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+td, .bodyText{
+    font-family: 'Oswald', sans-serif;
+    font-size: 12pt;
+}
+
+input{
+    border-radius: 5px;
+}
+
+.btn{
+    font-family: 'Oswald', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color : white;
+    background-color: black;
+    margin: 12px 12px 12px 12px;
+    border-radius: 5px;
+}
+.pagination > li > a,
+.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color : white;
+    background-color: darkgray;
+    border-color: white;
+    border-radius: 5px;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    z-index: 2;
+    color: black;
+    cursor: default;
+    background-color: white;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #f3f3f3;
+    border-color: #ddd;
+}
+
+
+
+
+

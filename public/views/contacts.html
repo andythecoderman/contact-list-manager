@@ -1,16 +1,28 @@
-<label for="nameSearch">Name Search:</label>&nbsp;<input id="nameSearch" ng-model="searchNameText" /><br/>
-<label for="stateSearch">State Search:</label>&nbsp;<input id="stateSearch" ng-model="searchStateText" /><br/>
-<dir-pagination-controls template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
-<a href="" ng-click="recPerPage=10">10</a>|<a href="" ng-click="recPerPage=20">20</a>|<a href="" ng-click="recPerPage=50">50</a>
-<div dir-paginate="contact in contacts | filter: applySearchFilter | orderBy: 'first_name' | itemsPerPage: recPerPage" class="panel panel-default">
-    <div class="panel-heading">{{contact.first_name}} {{contact.last_name}}</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <label for="nameSearch">Contact Name:</label>&nbsp;<input id="nameSearch" ng-model="searchNameText" />
+        <label for="stateSearch">State:</label>&nbsp;<input id="stateSearch" ng-model="searchStateText" /><br/>
+    </div>
     <div class="panel-body">
-        <address>
-            {{contact.address}}<br/>
-            {{contact.city}}, {{contact.state}} {{contact.zip}}<br/>
-            <abbr title="Phone">P:</abbr> {{contact.phone}}<br/>
-        </address>
-        <label>Join Date:</label>&nbsp;{{contact.join_date}}
+        <dir-pagination-controls template-url="templates/pagination.tpl.html"></dir-pagination-controls>
+        <table class="table table-responsive table-hover table-condensed">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+            <tr     dir-paginate="contact in contacts | filter: applySearchFilter | orderBy: 'first_name' | itemsPerPage: recPerPage"
+                    ng-click="openDetail(contact);">
+                <td>{{contact.first_name}}</td>
+                <td>{{contact.last_name}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.city}}</td>
+                <td>{{contact.state}}</td>
+            </tr>
+        </table>
+        <button class="btn btn-default" ng-click="recPerPage=10">10</button>|<button class="btn btn-default" ng-click="recPerPage=20">20</button>|<button class="btn btn-default" ng-click="recPerPage=50">50</button>
     </div>
 </div>
 

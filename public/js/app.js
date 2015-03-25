@@ -13,6 +13,11 @@ myApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function (
         controller : 'CustomerCtrl'
     });
 
+    $routeProvider.when('/detail', {
+        templateUrl:'views/detail.html',
+        controller : 'CustomerCtrl'
+    });
+
      // by default, redirect to site root
     $routeProvider.otherwise({
         redirectTo:'/'

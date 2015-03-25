@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+<div class="panel-heading">{{selectedContact.first_name}} {{selectedContact.last_name}}</div>
+<div class="panel-body">
+    <address class="bodyText">
+        {{selectedContact.address}}<br/>
+        {{selectedContact.city}}, {{selectedContact.state}} {{selectedContact.zip}}<br/>
+        <abbr title="Phone">P:</abbr> {{selectedContact.phone}}<br/>
+    </address>
+    <label>Join Date:</label>&nbsp;<span class="bodyText">{{selectedContact.join_date}}</span>
+</div>
+</div>
+
+<button type="button" class="btn btn-default" aria-label="back to list" onClick="window.history.back();">
+    <span class="glyphicon glyphicon-menu-left" aria-hidden="false"></span>&nbsp;<span>back to list</span>
+</button>

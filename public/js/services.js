@@ -5,6 +5,7 @@ contactsServices.factory('Contacts', function($rootScope, $http) {
             $http.get('/contacts').success(function(data) {
                 callback(data);
             });
-        }
+        },
+        selectedContact : null  //- Maintains currently selected detail view contact since there is no ID for routing
     };
 });
