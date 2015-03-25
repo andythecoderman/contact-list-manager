@@ -9,7 +9,7 @@ td, .bodyText{
     font-size: 12pt;
 }
 
-input{
+input, select{
     border-radius: 5px;
 }
 

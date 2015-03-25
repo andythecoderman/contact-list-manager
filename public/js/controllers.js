@@ -1,12 +1,13 @@
 
 var CustomerCtrl = myApp.controller(
     'CustomerCtrl',
-    ['$scope', '$routeParams', '$http', '$filter', '$location', 'Contacts',
-        function ($scope, $routeParams, $http, $filter, $location, Contacts) {
+    ['$scope', '$routeParams', '$http', '$filter', '$location', 'Contacts', 'States',
+        function ($scope, $routeParams, $http, $filter, $location, Contacts, States) {
 
     $scope.searchNameText = '';
     $scope.searchStateText = '';
     $scope.recPerPage = 10;
+    $scope.stateList = States.stateList;
     $scope.selectedContact = Contacts.selectedContact;
 
     $scope.openDetail = function(contact){
