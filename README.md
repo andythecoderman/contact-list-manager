@@ -1,5 +1,17 @@
 # contact-list-manager
 
+## running the application
+1. install node.js
+2. install git
+3. open command prompt to desired folder
+4. Download repo by running: git clone https://github.com/andythecoderman/contact-list-manager.git
+5. run: npm install
+6. run: node bin/www
+7. Navigate your browser to http://localhost:3000
+
+
+##Rrequirements
+
 Build an angular application that acts as a contact list manager for a fictitious club.  The attached json file has 100 fictitious members that can be used as your data.
 
  
